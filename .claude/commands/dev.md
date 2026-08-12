@@ -39,8 +39,8 @@ since opening a PR (not merging) is the intended, reversible end state of this f
      component", "wire up state", "update styles" — even if a group touches multiple files, and
      even if one file's changes get split across commits via `git add -p` when it mixes concerns).
      Avoid the trap of one commit per file when several files belong to the same concern.
-   - Write a concise commit message per commit describing *why*, following this repo's existing
-     commit style, ending with:
+   - Write a concise commit message per commit **in Korean**, describing *why*, following this
+     repo's existing commit style, ending with:
      ```
      Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
      ```
@@ -48,6 +48,6 @@ since opening a PR (not merging) is the intended, reversible end state of this f
 4. **Push and open the PR**
    - Push the branch: `git push -u origin <prefix>/<slug>`.
    - Open the PR with `gh pr create --base main --title "..." --body "..."`, where the title and
-     body are generated from the actual diff/commits (summary + test plan, following the repo's
-     PR conventions if any exist).
+     body are written **in Korean** and generated from the actual diff/commits (summary + test
+     plan, following the repo's PR conventions if any exist).
    - Report the PR URL back to the user as the final step.
