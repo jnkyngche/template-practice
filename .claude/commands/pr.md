@@ -15,7 +15,7 @@ merging) is the intended, reversible end state of this flow.
 1. **Verify state**
    - Run `git status` and `git log main..HEAD --oneline` (fetching `origin/main` first if needed).
    - If there are no commits ahead of `main`, or there are uncommitted changes, stop and tell the
-     user — this command expects work already committed on the current branch (e.g. via `/dev`).
+     user — this command expects work already committed on the current branch (e.g. via `/commit`).
    - If the current branch is `main` itself, stop and ask the user which branch to push instead.
 
 2. **Push**
