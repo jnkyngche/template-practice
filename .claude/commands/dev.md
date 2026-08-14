@@ -1,5 +1,5 @@
 ---
-description: Branch, implement, commit-by-logical-change, and open a PR for one piece of work
+description: Branch, implement, and commit-by-logical-change for one piece of work
 ---
 
 ## Task
@@ -8,9 +8,9 @@ $ARGUMENTS
 
 ## Flow
 
-Follow these steps in order. This command is pre-authorized to push branches and open PRs as
-part of its normal operation — no need to ask for confirmation before those specific steps,
-since opening a PR (not merging) is the intended, reversible end state of this flow.
+Follow these steps in order. This command is pre-authorized to create local branches and commits
+as part of its normal operation — no need to ask for confirmation before those specific steps.
+This command does **not** push or open a PR; use `/pr` for that once the work is committed.
 
 1. **Branch**
    - Run `git status` first. If there are uncommitted changes unrelated to this task, stop and
@@ -44,10 +44,5 @@ since opening a PR (not merging) is the intended, reversible end state of this f
      ```
      Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
      ```
-
-4. **Push and open the PR**
-   - Push the branch: `git push -u origin <prefix>/<slug>`.
-   - Open the PR with `gh pr create --base main --title "..." --body "..."`, where the title and
-     body are written **in Korean** and generated from the actual diff/commits (summary + test
-     plan, following the repo's PR conventions if any exist).
-   - Report the PR URL back to the user as the final step.
+   - Report back to the user what was committed and remind them to run `/pr` when ready to push
+     and open a pull request.
