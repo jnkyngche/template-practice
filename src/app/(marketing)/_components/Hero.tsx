@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { ArrowRightIcon } from "@/icons";
+
 export default function Hero() {
   return (
     <>
@@ -54,12 +56,13 @@ export default function Hero() {
           Deploy Now
         </a>
         <a
-          className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+          className="flex h-12 w-full items-center justify-center gap-2 rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Documentation
+          <ArrowRightIcon className="h-4 w-4" />
         </a>
       </div>
     </>
